@@ -30,6 +30,19 @@ public class Q2AA {
         s2.checkProgress(sr2);
         s2.markDone(sr2);
         //Scenario 2 implementations are in classes
+        for(Student student: p1.students) {
+            student.addTask(sr3);
+            System.out.println("You have a new task: " + sr3.getName());
+        }
+        
+        for(Student student: p2.students) {
+            student.addTask(sr3);
+            System.out.println("You have a new task: " + sr3.getName());
+        }
+        
+        Student user = p1.students.get(0);
+        user.markDone(sr3);
+        System.out.println("Congratz! Task completed and removed from the student's list.");
         
     }
 }
